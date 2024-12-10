@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws Grooming Booking</title>
+  <link rel="stylesheet" href="styles.css"> 
+ 
+ <style>
+
+    body {
+    background-image: url("pet.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1919;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: static;
+  }
+  
+  button:hover {
+    background-color: gray;
+  }
+  
+  .form-container {
+    max-width: 1000px;
+    opacity: 0.90;
+  }
+
+  </style>
+  
+</head>
+<body>
+  <form action="book.html" class="form-container">
+    <h1> <center> Pet Grooming Booking Form </center> </h1>
+
+    <div class="pet">
+      <label for="petName">Pet Name</label>
+      <input id="petName" type="text" placeholder="Enter your pet's name" required>
+    </div>
+
+    <div class="pet">
+      <label for="breed">Pet Breed</label>
+      <input id="breed" type="text" placeholder="Enter your pet's breed" required>
+    </div>
+
+    <div class="pet">
+      <label for="size">Pet Size</label>
+      <select id="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+    </div>
+
+    <div class="pet">
+      <label>Service Type</label>
+      <div>
+        <label class="radio-label">
+          <input type="radio" name="service" value="bath" required>
+          <span>Bath</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="service" value="haircut" required>
+          <span>Haircut</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="service" value="nail-trim" required>
+          <span>NailTrim</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="pet">
+      <label for="date">Preferred Date</label>
+      <input id="date" type="date" required>
+    </div>
+
+    <div class="pet">
+      <label for="time">Preferred Time</label>
+      <input id="time" type="time" required>
+    </div>
+
+    <div class="pet">
+      <label for="notes">Special Notes</label>
+      <textarea id="notes" rows="3" placeholder="Mention any special needs or allergies"></textarea>
+    </div>
+
+    <a href="book.html"> <button onclick> Book Appointment</button> </a>
+  </form>
+</body>
+</html>
